@@ -1,0 +1,2 @@
+# Python >=3.10. The experiment and evaluation use only the standard library.
+# No third-party Python packages are required.

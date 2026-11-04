@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="520" viewBox="0 0 1400 520" role="img" aria-labelledby="title description">
+  <title id="title">RedundancyBench benchmark overview</title>
+  <desc id="description">Human and model-consensus annotated trajectories from three domains feed three evaluation tasks. An illustrative trajectory shows a redundant tool interaction linked to supporting evidence.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#7892af"/>
+    </marker>
+    <marker id="evidence-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#189a9c"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="520" fill="#ffffff"/>
+  <text x="700" y="44" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#102c51">Benchmark overview</text>
+  <text x="700" y="70" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#60748c">From annotated agent trajectories to step-level and trajectory-level evaluation</text>
+
+  <rect x="30" y="100" width="310" height="360" rx="20" fill="#fbfdff" stroke="#9eb7d0" stroke-width="2" stroke-dasharray="9 7"/>
+  <rect x="50" y="118" width="54" height="30" rx="15" fill="#dbeafd"/>
+  <text x="77" y="139" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#2363a3">01</text>
+  <text x="116" y="140" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#102c51">Released data</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" text-anchor="middle">
+    <rect x="50" y="167" width="78" height="31" rx="15" fill="#eaf3ff"/><text x="89" y="188" fill="#2f6da7">Airline</text>
+    <rect x="137" y="167" width="75" height="31" rx="15" fill="#e8f7f4"/><text x="174" y="188" fill="#278275">Retail</text>
+    <rect x="221" y="167" width="97" height="31" rx="15" fill="#fff1e7"/><text x="269" y="188" fill="#a5612c">Telecom</text>
+  </g>
+  <rect x="50" y="220" width="268" height="75" rx="12" fill="#ffffff" stroke="#dce6ef"/>
+  <circle cx="74" cy="244" r="6" fill="#3985d2"/>
+  <text x="90" y="249" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#173958">Human annotated</text>
+  <text x="90" y="275" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#5b7089">189 trajectories · 657 steps</text>
+  <rect x="50" y="305" width="268" height="75" rx="12" fill="#ffffff" stroke="#dce6ef"/>
+  <circle cx="74" cy="329" r="6" fill="#25a39a"/>
+  <text x="90" y="334" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#173958">Model consensus</text>
+  <text x="90" y="360" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#5b7089">1,731 trajectories · 2,956 steps</text>
+  <text x="184" y="425" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#315c82">1,920 positive trajectories in total</text>
+
+  <line x1="349" y1="280" x2="398" y2="280" stroke="#7892af" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="410" y="100" width="500" height="360" rx="20" fill="#fbfdff" stroke="#9eb7d0" stroke-width="2" stroke-dasharray="9 7"/>
+  <rect x="430" y="118" width="54" height="30" rx="15" fill="#dbeafd"/>
+  <text x="457" y="139" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#2363a3">02</text>
+  <text x="496" y="140" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#102c51">Annotated trajectory</text>
+  <text x="430" y="170" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#657990">Illustrative duplicate-step example</text>
+
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <rect x="430" y="202" width="101" height="89" rx="13" fill="#ffffff" stroke="#cad8e7" stroke-width="2"/>
+    <text x="480" y="236" font-size="16" font-weight="700" fill="#193b5d">User</text>
+    <text x="480" y="261" font-size="14" fill="#637991">request</text>
+    <rect x="549" y="202" width="101" height="89" rx="13" fill="#e9f8f6" stroke="#6bc4bb" stroke-width="2"/>
+    <text x="599" y="236" font-size="16" font-weight="700" fill="#166f6a">Tool A</text>
+    <text x="599" y="261" font-size="14" fill="#477f7a">evidence</text>
+    <rect x="668" y="202" width="101" height="89" rx="13" fill="#fff0e9" stroke="#ef9b72" stroke-width="2"/>
+    <text x="718" y="236" font-size="16" font-weight="700" fill="#a64a23">Tool A</text>
+    <text x="718" y="261" font-size="14" fill="#aa6342">redundant</text>
+    <rect x="787" y="202" width="101" height="89" rx="13" fill="#ffffff" stroke="#cad8e7" stroke-width="2"/>
+    <text x="837" y="236" font-size="16" font-weight="700" fill="#193b5d">Agent</text>
+    <text x="837" y="261" font-size="14" fill="#637991">continues</text>
+  </g>
+  <g stroke="#91a7bd" stroke-width="2" marker-end="url(#arrow)">
+    <line x1="533" y1="246" x2="545" y2="246"/>
+    <line x1="652" y1="246" x2="664" y2="246"/>
+    <line x1="771" y1="246" x2="783" y2="246"/>
+  </g>
+  <path d="M599 306 V322 Q599 334 614 334 H704 Q718 334 718 322 V306" fill="none" stroke="#189a9c" stroke-width="2.5" stroke-dasharray="6 5" marker-end="url(#evidence-arrow)"/>
+  <rect x="451" y="366" width="418" height="62" rx="12" fill="#edf3fb"/>
+  <text x="660" y="391" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#284d73">Reference annotation</text>
+  <text x="660" y="414" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#4e6986">step index + redundancy type + evidence index</text>
+
+  <line x1="919" y1="280" x2="968" y2="280" stroke="#7892af" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="980" y="100" width="390" height="360" rx="20" fill="#fbfdff" stroke="#9eb7d0" stroke-width="2" stroke-dasharray="9 7"/>
+  <rect x="1000" y="118" width="54" height="30" rx="15" fill="#dbeafd"/>
+  <text x="1027" y="139" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" fill="#2363a3">03</text>
+  <text x="1066" y="140" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#102c51">Evaluation tasks</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="1000" y="170" width="350" height="78" rx="12" fill="#ffffff" stroke="#d9e5f0"/>
+    <rect x="1000" y="170" width="7" height="78" rx="3" fill="#3e86d3"/>
+    <text x="1020" y="196" font-size="18" font-weight="700" fill="#1a4169">StepCls</text>
+    <text x="1020" y="219" font-size="14" fill="#5c718a">trajectory + step + evidence → type</text>
+    <text x="1330" y="196" text-anchor="end" font-size="14" font-weight="700" fill="#3373b2">Acc</text>
+    <rect x="1000" y="260" width="350" height="78" rx="12" fill="#ffffff" stroke="#d9e5f0"/>
+    <rect x="1000" y="260" width="7" height="78" rx="3" fill="#28a59b"/>
+    <text x="1020" y="286" font-size="18" font-weight="700" fill="#1a4169">EvidenceRet</text>
+    <text x="1020" y="309" font-size="14" fill="#5c718a">trajectory + step → evidence + type</text>
+    <text x="1330" y="286" text-anchor="end" font-size="14" font-weight="700" fill="#258e85">Acc</text>
+    <rect x="1000" y="350" width="350" height="78" rx="12" fill="#ffffff" stroke="#d9e5f0"/>
+    <rect x="1000" y="350" width="7" height="78" rx="3" fill="#ed9565"/>
+    <text x="1020" y="376" font-size="18" font-weight="700" fill="#1a4169">StepDet</text>
+    <text x="1020" y="399" font-size="14" fill="#5c718a">trajectory → ranked triples</text>
+    <text x="1330" y="376" text-anchor="end" font-size="14" font-weight="700" fill="#bd6c41">P@K</text>
+  </g>
+  <text x="700" y="495" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#627890">Task inputs determine which reference fields are shown to the judge; scoring is performed separately after inference.</text>
+</svg>
