@@ -1,0 +1,3426 @@
+{
+  "metadata": {
+    "task": "detect",
+    "model": "v3_airline",
+    "requested_units": 38,
+    "dataset_id": "human_annotation"
+  },
+  "results": [
+    {
+      "identity": "airline:0",
+      "trajectory_id": "0",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            4,
+            5
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            2,
+            3
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ],
+          "confidence": 1.0,
+          "event_id": "E007",
+          "reason": "转接调用确实因网络超时失败，随后同参数重试成功。"
+        },
+        {
+          "redundant_step_idx": [
+            4,
+            5
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            8,
+            9
+          ],
+          "confidence": 0.9,
+          "event_id": "E004",
+          "reason": "查询账户资料是合理的背景核查，但转接摘要未使用其返回的资料，删去该查询不改变后续转接。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:1",
+      "trajectory_id": "1",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            18,
+            19
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            1
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            18,
+            19
+          ],
+          "confidence": 1.0,
+          "event_id": "E011",
+          "reason": "本次调用确实报错，随后相同查询重试成功。"
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            20
+          ],
+          "confidence": 0.91,
+          "event_id": "E012",
+          "reason": "重试查询是合理的恢复尝试，但返回的航班状态未影响后续展示或处理决定。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:2",
+      "trajectory_id": "2",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            12,
+            13
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            12,
+            13
+          ],
+          "confidence": 0.99,
+          "event_id": "E011",
+          "reason": "此前已用相同参数取得相同详情，重复查询没有改变后续回复或决策。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:3",
+      "trajectory_id": "3",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            4,
+            5
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            4,
+            5
+          ],
+          "confidence": 0.99,
+          "event_id": "E005",
+          "reason": "此前已用相同参数查得相同资料，期间没有状态变化，这次结果未改变后续处理。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:4",
+      "trajectory_id": "4",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ],
+          "confidence": 0.99,
+          "event_id": "E007",
+          "reason": "本步确实返回连接失败，随后相同参数的重试成功。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:5",
+      "trajectory_id": "5",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            12,
+            13
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            12,
+            13
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            12,
+            13
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ],
+          "confidence": 1.0,
+          "event_id": "E007",
+          "reason": "网络错误触发了成功重试。"
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            18
+          ],
+          "confidence": 0.96,
+          "event_id": "E012",
+          "reason": "目标预订与航班延误已确认，后续回复未使用 CYPIDV 的信息。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:6",
+      "trajectory_id": "6",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ],
+          "confidence": 1.0,
+          "event_id": "E009",
+          "reason": "本步确实超时失败，随后对同一预订重试成功。"
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ],
+          "confidence": 0.99,
+          "event_id": "E012",
+          "reason": "此前成功重试已返回相同预订信息，之后重复查询未改变任何后续决策。"
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            1
+          ],
+          "confidence": 0.97,
+          "event_id": "E013",
+          "reason": "用户要求核查的是旅行保险状态，航班准点信息没有进入后续结论或改变处理动作。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:8",
+      "trajectory_id": "8",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            18,
+            19
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            18,
+            19
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            18,
+            19
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            18,
+            19
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ],
+          "confidence": 0.99,
+          "event_id": "E009",
+          "reason": "状态未变且此前已有相同参数的有效结果，此次重复查询没有新增信息。"
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ],
+          "confidence": 0.99,
+          "event_id": "E011",
+          "reason": "状态未变且此前已有相同参数的有效结果，此次重复查询没有新增信息。"
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ],
+          "confidence": 0.78,
+          "event_id": "E008",
+          "reason": "查询是合理的候选搜索，但随后同参复查，后续搜索可由复查结果支撑。"
+        },
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ],
+          "confidence": 0.78,
+          "event_id": "E010",
+          "reason": "查询是合理的候选搜索，但随后同参复查，后续搜索可由复查结果支撑。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:9",
+      "trajectory_id": "9",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ],
+          "confidence": 1.0,
+          "event_id": "E007",
+          "reason": "工具明确返回网络超时，随后同参数重试成功。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:10",
+      "trajectory_id": "10",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            20,
+            21
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ],
+          "confidence": 0.99,
+          "event_id": "E011",
+          "reason": "此前已用相同参数查询AJVCTQ且返回相同结果，期间无状态变化。"
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ],
+          "confidence": 0.99,
+          "event_id": "E012",
+          "reason": "紧接着重复相同的AJVCTQ查询，返回未变且没有新增收益。"
+        },
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ],
+          "confidence": 0.94,
+          "event_id": "E010",
+          "reason": "目标预订已在[6,7]确认，此时仍查询无关的AJVCTQ，结果未改变后续处理。"
+        },
+        {
+          "redundant_step_idx": [
+            20,
+            21
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ],
+          "confidence": 0.94,
+          "event_id": "E013",
+          "reason": "目标预订已确认，之后查询ZB7LBX没有影响任何后续决策。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:12",
+      "trajectory_id": "12",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            4,
+            5
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            4,
+            5
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            4,
+            5
+          ],
+          "confidence": 0.99,
+          "event_id": "E005",
+          "reason": "此前相同查询已返回相同会员和账户资料，期间没有状态变化，本次没有带来新信息。"
+        },
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            4,
+            5
+          ],
+          "confidence": 0.99,
+          "event_id": "E006",
+          "reason": "此前相同查询已返回相同会员和账户资料，期间没有状态变化，本次没有带来新信息。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:13",
+      "trajectory_id": "13",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            20,
+            21
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            22,
+            23
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            24,
+            25
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            26,
+            27
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            28,
+            29
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            30,
+            31
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            30,
+            31
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            26,
+            27
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ],
+          "confidence": 0.99,
+          "event_id": "E016",
+          "reason": "此前已用相同参数查询 KBE052 并得到相同结果，期间没有状态变化。"
+        },
+        {
+          "redundant_step_idx": [
+            28,
+            29
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            30,
+            31
+          ],
+          "confidence": 0.99,
+          "event_id": "E017",
+          "reason": "该查询确实报错，随后对 H64BP6 的重试成功恢复了查询。"
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ],
+          "confidence": 0.94,
+          "event_id": "E012",
+          "reason": "XEWRD9 已匹配用户描述并用于回复，之后查询 U5VILT 未改变目标判断。"
+        },
+        {
+          "redundant_step_idx": [
+            20,
+            21
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ],
+          "confidence": 0.94,
+          "event_id": "E013",
+          "reason": "目标预订已由 XEWRD9 的结果确定，之后查询 8UNKKU 未影响回复中的识别结论。"
+        },
+        {
+          "redundant_step_idx": [
+            22,
+            23
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ],
+          "confidence": 0.94,
+          "event_id": "E014",
+          "reason": "目标预订已由 XEWRD9 的结果确定，之后查询 0Y0TH3 未影响回复中的识别结论。"
+        },
+        {
+          "redundant_step_idx": [
+            24,
+            25
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ],
+          "confidence": 0.94,
+          "event_id": "E015",
+          "reason": "目标预订已由 XEWRD9 的结果确定，之后查询 KBE052 未影响回复中的识别结论。"
+        },
+        {
+          "redundant_step_idx": [
+            30,
+            31
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ],
+          "confidence": 0.91,
+          "event_id": "E018",
+          "reason": "XEWRD9 已匹配并支撑回复，H64BP6 的重试结果没有改变后续判断。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:14",
+      "trajectory_id": "14",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            20,
+            21
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            22,
+            23
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            32,
+            33
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            34,
+            35
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            32,
+            33
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            34,
+            35
+          ],
+          "confidence": 1.0,
+          "event_id": "E021",
+          "reason": "取消调用确实返回网络错误，后续重试成功完成了取消。"
+        },
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ],
+          "confidence": 0.99,
+          "event_id": "E010",
+          "reason": "同参数查询已有相同结果，后续预订使用的是该已有结果而非重复查询带来的新信息。"
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ],
+          "confidence": 0.99,
+          "event_id": "E013",
+          "reason": "相同参数的前次查询已有相同结果，此次没有提供新的航班信息。"
+        },
+        {
+          "redundant_step_idx": [
+            20,
+            21
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            18,
+            19
+          ],
+          "confidence": 0.99,
+          "event_id": "E014",
+          "reason": "相同参数的前次查询已有相同结果，且查询间没有显示状态变化。"
+        },
+        {
+          "redundant_step_idx": [
+            22,
+            23
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            20,
+            21
+          ],
+          "confidence": 0.99,
+          "event_id": "E015",
+          "reason": "相同参数此前已返回相同航班信息，此次没有带来新收益。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:15",
+      "trajectory_id": "15",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ],
+          "confidence": 0.99,
+          "event_id": "E007",
+          "reason": "此前已用相同参数取得有效的 M05KNL 详情，重复查询未带来新信息。"
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ],
+          "confidence": 0.99,
+          "event_id": "E011",
+          "reason": "此前相同参数的一站中转搜索已有结果，重复查询没有增加可用信息。"
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ],
+          "confidence": 0.94,
+          "event_id": "E008",
+          "reason": "[6,7] 已确认 M05KNL 符合用户所述路线，查询路线不符的另一笔预订未影响后续处理。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:17",
+      "trajectory_id": "17",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            28,
+            29
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            30,
+            31
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            28,
+            29
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            30,
+            31
+          ],
+          "confidence": 1.0,
+          "event_id": "E018",
+          "reason": "本步返回网络错误，随后相同参数重试成功并完成行李更新。"
+        },
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ],
+          "confidence": 0.99,
+          "event_id": "E009",
+          "reason": "此前已用相同参数查得 FQ8APE 的相同详情，期间没有状态变化，本次结果未改变后续决策。"
+        },
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ],
+          "confidence": 0.99,
+          "event_id": "E010",
+          "reason": "此前已查得相同的 FQ8APE 详情，期间没有状态变化，本次调用未增加信息或改变后续决策。"
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ],
+          "confidence": 0.95,
+          "event_id": "E011",
+          "reason": "目标预订 FQ8APE 已匹配用户所述行程，而 QKRY03 的详情没有用于后续处理。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:18",
+      "trajectory_id": "18",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            1
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            1
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            22,
+            23
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            26,
+            27
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            28,
+            29
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            32,
+            33
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            30,
+            31
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            32,
+            33
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            34,
+            35
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            32,
+            33
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            36,
+            37
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            38,
+            39
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            40,
+            41
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            44,
+            45
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            42,
+            43
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            44,
+            45
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            34,
+            35
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            32,
+            33
+          ],
+          "confidence": 0.99,
+          "event_id": "E020",
+          "reason": "此前相同参数的更新已成功且期间无状态变化，本次重复没有新收益。"
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ],
+          "confidence": 0.94,
+          "event_id": "E010",
+          "reason": "查询是合理的航班可用性探索，但实际更新保留原航班，未由查询结果改变选择。"
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ],
+          "confidence": 0.94,
+          "event_id": "E011",
+          "reason": "查询是合理的航班可用性探索，但实际更新保留原航班，未由查询结果改变选择。"
+        },
+        {
+          "redundant_step_idx": [
+            22,
+            23
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            26,
+            27
+          ],
+          "confidence": 0.94,
+          "event_id": "E014",
+          "reason": "查询是合理的航班可用性探索，但实际更新沿用原行程，未由查询结果改变选择。"
+        },
+        {
+          "redundant_step_idx": [
+            30,
+            31
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            32,
+            33
+          ],
+          "confidence": 0.94,
+          "event_id": "E018",
+          "reason": "查询是合理的航班可用性探索，但实际更新沿用原航班，未由查询结果改变选择。"
+        },
+        {
+          "redundant_step_idx": [
+            36,
+            37
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            38,
+            39
+          ],
+          "confidence": 0.94,
+          "event_id": "E021",
+          "reason": "查询是合理的航班可用性探索，但实际更新沿用原航班，未由查询结果改变选择。"
+        },
+        {
+          "redundant_step_idx": [
+            40,
+            41
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            44,
+            45
+          ],
+          "confidence": 0.94,
+          "event_id": "E023",
+          "reason": "查询是合理的航班可用性探索，但实际更新沿用原航班，未由查询结果改变选择。"
+        },
+        {
+          "redundant_step_idx": [
+            42,
+            43
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            44,
+            45
+          ],
+          "confidence": 0.94,
+          "event_id": "E024",
+          "reason": "查询是合理的航班可用性探索，但实际更新沿用原航班，未由查询结果改变选择。"
+        },
+        {
+          "redundant_step_idx": [
+            28,
+            29
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            32,
+            33
+          ],
+          "confidence": 0.93,
+          "event_id": "E017",
+          "reason": "查询是合理的航班可用性探索，但实际更新沿用原航班，未由查询结果改变选择。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:20",
+      "trajectory_id": "20",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            8,
+            9
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            8,
+            9
+          ],
+          "confidence": 0.99,
+          "event_id": "E008",
+          "reason": "此前相同参数的直飞查询已返回相同结果，期间没有状态变化或新增收益。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:22",
+      "trajectory_id": "22",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ],
+          "confidence": 1.0,
+          "event_id": "E010",
+          "reason": "本步确实返回网络错误，随后相同参数的重试成功。"
+        },
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ],
+          "confidence": 0.97,
+          "event_id": "E009",
+          "reason": "FQ8APE 已匹配请求并成为后续写操作目标，查询另一张不匹配的预订没有改变后续处理。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:24",
+      "trajectory_id": "24",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            24,
+            25
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            22,
+            23
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            26,
+            27
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            22,
+            23
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            28,
+            29
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            22,
+            23
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            30,
+            31
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            22,
+            23
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            24,
+            25
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            22,
+            23
+          ],
+          "confidence": 0.99,
+          "event_id": "E015",
+          "reason": "相同参数此前已返回无航班，状态未变，本次重查没有新增信息。"
+        },
+        {
+          "redundant_step_idx": [
+            26,
+            27
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ],
+          "confidence": 0.99,
+          "event_id": "E016",
+          "reason": "相同参数此前已返回无航班，状态未变，本次重查没有新增信息。"
+        },
+        {
+          "redundant_step_idx": [
+            28,
+            29
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            26,
+            27
+          ],
+          "confidence": 0.99,
+          "event_id": "E017",
+          "reason": "相同参数此前已返回无航班，状态未变，本次重查没有新增信息。"
+        },
+        {
+          "redundant_step_idx": [
+            30,
+            31
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            28,
+            29
+          ],
+          "confidence": 0.99,
+          "event_id": "E018",
+          "reason": "相同参数此前已返回无航班，状态未变，本次重查没有新增信息。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:25",
+      "trajectory_id": "25",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            18,
+            19
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            18,
+            19
+          ],
+          "confidence": 1.0,
+          "event_id": "E014",
+          "reason": "本次预订调用真实返回网络超时，随后相同参数重试成功。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:26",
+      "trajectory_id": "26",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ]
+        }
+      ],
+      "predictions": [],
+      "error": false
+    },
+    {
+      "identity": "airline:27",
+      "trajectory_id": "27",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            20,
+            21
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            22,
+            23
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ],
+          "confidence": 1.0,
+          "event_id": "E007",
+          "reason": "工具确实报错，助手随后原参数重试并成功取得 DQST39 详情。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:28",
+      "trajectory_id": "28",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            1
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ],
+          "confidence": 0.82,
+          "event_id": "E005",
+          "reason": "查看账户付款资料对退款请求有一定合理性，但转接摘要和后续处理没有使用该结果。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:31",
+      "trajectory_id": "31",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            4,
+            5
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            8,
+            9
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            8,
+            9
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            20,
+            21
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            20,
+            21
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            20,
+            21
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            8,
+            9
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            4,
+            5
+          ],
+          "confidence": 1.0,
+          "event_id": "E006",
+          "reason": "此前相同参数的查询已返回相同用户资料，期间没有状态变化。"
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ],
+          "confidence": 1.0,
+          "event_id": "E011",
+          "reason": "此前相同日期和路线的查询已返回相同航班结果，期间没有状态变化。"
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            20,
+            21
+          ],
+          "confidence": 1.0,
+          "event_id": "E012",
+          "reason": "本次转人工调用确实报网络错误，随后相同请求重试成功。"
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            8,
+            9
+          ],
+          "confidence": 0.96,
+          "event_id": "E008",
+          "reason": "DF89BM 已匹配用户所述的出发地和日期，之后查询另一笔无关预订未改变处理。"
+        },
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            8,
+            9
+          ],
+          "confidence": 0.96,
+          "event_id": "E009",
+          "reason": "目标预订已由 DF89BM 匹配，查询这笔不同路线和日期的预订未改变后续处理。"
+        },
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            18,
+            19
+          ],
+          "confidence": 0.9,
+          "event_id": "E010",
+          "reason": "查询直飞航班是回应用户需求的合理探索，但后续转人工依据是基本经济舱限制，摘要未采用航班查询结果。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:32",
+      "trajectory_id": "32",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            4,
+            5
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            4,
+            5
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            4,
+            5
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ],
+          "confidence": 1.0,
+          "event_id": "E006",
+          "reason": "此前已用相同参数查询 F3IQK1 并获得相同结果，期间没有状态变化。"
+        },
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            4,
+            5
+          ],
+          "confidence": 0.97,
+          "event_id": "E008",
+          "reason": "[4-5]已确认目标预订，查询日期和航线均不符的 L2H5FP 未影响后续决策。"
+        },
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            4,
+            5
+          ],
+          "confidence": 0.96,
+          "event_id": "E005",
+          "reason": "[4-5]已确认预订 OWZ4XL 符合用户所述行程，之后查询无关的 F3IQK1 未改变处理决策。"
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            4,
+            5
+          ],
+          "confidence": 0.95,
+          "event_id": "E007",
+          "reason": "[4-5]已确认与用户请求匹配的预订，查询 8WMF4C 未改变之后的处理决策。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:33",
+      "trajectory_id": "33",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            22,
+            23
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            22,
+            23
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ],
+          "confidence": 1.0,
+          "event_id": "E018",
+          "reason": "本步实际报错，随后同参数重试成功，属于错误恢复链。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:34",
+      "trajectory_id": "34",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ],
+          "confidence": 0.99,
+          "event_id": "E009",
+          "reason": "此前相同参数的查询已返回相同结果，期间没有状态变化，因此再次查询未影响后续处理。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:35",
+      "trajectory_id": "35",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            24,
+            25
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            17
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ],
+          "confidence": 0.96,
+          "event_id": "E007",
+          "reason": "目标行程已由 [6-7] 定位为 M20IZO，查询另一笔不匹配的预订没有影响后续决策。"
+        },
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ],
+          "confidence": 0.96,
+          "event_id": "E009",
+          "reason": "请求中的行程已由 [6-7] 定位为 M20IZO，查询 IFOYYZ 未改变后续处理。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:36",
+      "trajectory_id": "36",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            4,
+            5
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            2,
+            3
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            2,
+            3
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            4,
+            5
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            2,
+            3
+          ],
+          "confidence": 0.99,
+          "event_id": "E004",
+          "reason": "[2-3]已查询同一预约并返回相同详情，重复查询未改变后续处理。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:37",
+      "trajectory_id": "37",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            4,
+            5
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            28,
+            29
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            26,
+            27
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            4,
+            5
+          ],
+          "confidence": 0.99,
+          "event_id": "E006",
+          "reason": "此前已用相同用户 ID 成功取得相同账户详情，期间无状态变化，本次没有新增信息。"
+        },
+        {
+          "redundant_step_idx": [
+            28,
+            29
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            26,
+            27
+          ],
+          "confidence": 0.99,
+          "event_id": "E019",
+          "reason": "相同摘要的转人工操作已在[26]成功完成，本次重复调用没有新增处理结果。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:38",
+      "trajectory_id": "38",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            8,
+            9
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            20,
+            21
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            18,
+            19
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            26,
+            27
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            28,
+            29
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            26,
+            27
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            28,
+            29
+          ],
+          "confidence": 1.0,
+          "event_id": "E016",
+          "reason": "本步遇到超时，随后相同参数重试成功。"
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            8,
+            9
+          ],
+          "confidence": 0.99,
+          "event_id": "E008",
+          "reason": "此前已用相同参数查得相同预订详情，期间没有状态变化或新增收益。"
+        },
+        {
+          "redundant_step_idx": [
+            20,
+            21
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            18,
+            19
+          ],
+          "confidence": 0.99,
+          "event_id": "E013",
+          "reason": "此前相同航班和日期的查询已返回相同状态，重复查询没有新增收益。"
+        },
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            32
+          ],
+          "confidence": 0.91,
+          "event_id": "E010",
+          "reason": "检查另一预订的 HAT006 属于合理排查，但后续结论只列出 SDZQKO 的航段状态，未使用此结果。"
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            32
+          ],
+          "confidence": 0.91,
+          "event_id": "E011",
+          "reason": "检查另一预订的 HAT040 属于合理排查，但后续结论只列出 SDZQKO 的航段状态，未使用此结果。"
+        },
+        {
+          "redundant_step_idx": [
+            24,
+            25
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            32
+          ],
+          "confidence": 0.91,
+          "event_id": "E015",
+          "reason": "检查另一预订的 HAT253 属于合理排查，但后续结论只列出 SDZQKO 的航段状态，未使用此结果。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:40",
+      "trajectory_id": "40",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ],
+          "confidence": 1.0,
+          "event_id": "E007",
+          "reason": "该调用确实超时失败，随后对同一预订号重试并成功返回。"
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            18,
+            19
+          ],
+          "confidence": 0.9,
+          "event_id": "E008",
+          "reason": "查询 790JYN 的结果未进入后续更名写操作，用户明确指定的 3RK2T9 才被更新。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:43",
+      "trajectory_id": "43",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            12,
+            13
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            16,
+            17
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            12,
+            13
+          ],
+          "confidence": 1.0,
+          "event_id": "E008",
+          "reason": "本步真实报错，随后对同一预订重试成功。"
+        },
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            20
+          ],
+          "confidence": 0.79,
+          "event_id": "E006",
+          "reason": "按用户给出的日期和航线查账户预订是合理探索，但最终说明只涉及匹配的两笔预订，本步未改变后续动作。"
+        },
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            20
+          ],
+          "confidence": 0.79,
+          "event_id": "E007",
+          "reason": "逐笔检查账户预订是合理探索，但最终说明只涉及匹配的两笔预订，本步未改变后续动作。"
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            20
+          ],
+          "confidence": 0.79,
+          "event_id": "E013",
+          "reason": "检查账户中的候选预订有合理探索理由，但最终说明只使用了匹配的两笔预订，本步未改变后续动作。"
+        },
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            20
+          ],
+          "confidence": 0.78,
+          "event_id": "E009",
+          "reason": "重试成功取得了一笔不匹配的预订资料，但最终说明未使用该资料，也未改变后续动作。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:45",
+      "trajectory_id": "45",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            1
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            16
+          ],
+          "confidence": 0.88,
+          "event_id": "E010",
+          "reason": "查询当天航班状态有一定探索理由，但后续展示和用户选择都未使用“准点”结果。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:46",
+      "trajectory_id": "46",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            20,
+            21
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            20,
+            21
+          ],
+          "confidence": 0.99,
+          "event_id": "E013",
+          "reason": "本步真实报错，随后在 [20,21] 重试并成功完成转接。"
+        },
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            17
+          ],
+          "confidence": 0.91,
+          "event_id": "E006",
+          "reason": "当时用户尚未指定预订，查询是合理探索；实际目标后来由用户在 [17] 指定为 H8Q05L，NM1VX1 的结果未影响后续动作。"
+        },
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            17
+          ],
+          "confidence": 0.91,
+          "event_id": "E007",
+          "reason": "当时用户尚未指定预订，查询是合理探索；实际目标后来由用户在 [17] 指定为 H8Q05L，KC18K6 的结果未影响后续动作。"
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            17
+          ],
+          "confidence": 0.91,
+          "event_id": "E008",
+          "reason": "当时用户尚未指定预订，查询是合理探索；实际目标后来由用户在 [17] 指定为 H8Q05L，S61CZX 的结果未影响后续动作。"
+        },
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            17
+          ],
+          "confidence": 0.91,
+          "event_id": "E010",
+          "reason": "当时用户尚未指定预订，查询是合理探索；实际目标后来由用户在 [17] 指定为 H8Q05L，WUNA5K 的结果未影响后续动作。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:47",
+      "trajectory_id": "47",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            18
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            10,
+            11
+          ],
+          "confidence": 1.0,
+          "event_id": "E007",
+          "reason": "本步确实报网络超时，随后对同一预订重试并成功。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:48",
+      "trajectory_id": "48",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            33
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            33
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            33
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            33
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            33
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            22,
+            23
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            24,
+            25
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            33
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            26,
+            27
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            33
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            28,
+            29
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            33
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            30,
+            31
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            28,
+            29
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            22,
+            23
+          ],
+          "redundant_step_type": "Abnormal Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ],
+          "confidence": 1.0,
+          "event_id": "E014",
+          "reason": "本步真实报错，随后对相同预订成功重试。"
+        },
+        {
+          "redundant_step_idx": [
+            8,
+            9
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            6,
+            7
+          ],
+          "confidence": 0.99,
+          "event_id": "E007",
+          "reason": "在状态未变时重复查询了相同预订，且先前已取得相同结果。"
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            14,
+            15
+          ],
+          "confidence": 0.99,
+          "event_id": "E011",
+          "reason": "在状态未变时重复查询了相同预订，且先前已取得相同结果。"
+        },
+        {
+          "redundant_step_idx": [
+            6,
+            7
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            33
+          ],
+          "confidence": 0.88,
+          "event_id": "E006",
+          "reason": "当时可合理检查账户中的候选预订，但用户后来明确指定 3RK2T9，本步结果未影响实际处理。"
+        },
+        {
+          "redundant_step_idx": [
+            10,
+            11
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            33
+          ],
+          "confidence": 0.88,
+          "event_id": "E008",
+          "reason": "检查候选预订有合理探索理由，但用户随后明确指定了另一预订，本步结果未影响后续处理。"
+        },
+        {
+          "redundant_step_idx": [
+            12,
+            13
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            33
+          ],
+          "confidence": 0.88,
+          "event_id": "E009",
+          "reason": "检查候选预订有合理探索理由，但用户随后明确指定了另一预订，本步结果未影响后续处理。"
+        },
+        {
+          "redundant_step_idx": [
+            14,
+            15
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            33
+          ],
+          "confidence": 0.88,
+          "event_id": "E010",
+          "reason": "检查候选预订有合理探索理由，但用户随后明确指定了另一预订，本步结果未影响后续处理。"
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            33
+          ],
+          "confidence": 0.88,
+          "event_id": "E012",
+          "reason": "检查候选预订有合理探索理由，但用户随后明确指定了另一预订，本步结果未影响后续处理。"
+        },
+        {
+          "redundant_step_idx": [
+            26,
+            27
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            33
+          ],
+          "confidence": 0.88,
+          "event_id": "E017",
+          "reason": "检查候选预订有合理探索理由，但用户随后明确指定了另一预订，本步结果未影响后续处理。"
+        },
+        {
+          "redundant_step_idx": [
+            28,
+            29
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            33
+          ],
+          "confidence": 0.88,
+          "event_id": "E018",
+          "reason": "检查候选预订有合理探索理由，但用户随后明确指定了另一预订，本步结果未影响后续处理。"
+        },
+        {
+          "redundant_step_idx": [
+            30,
+            31
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            33
+          ],
+          "confidence": 0.86,
+          "event_id": "E019",
+          "reason": "目标预订尚未确定时检查候选航班状态有探索理由，但该航班并非用户指定的 3RK2T9 航班，结果未影响后续处理。"
+        },
+        {
+          "redundant_step_idx": [
+            24,
+            25
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            33
+          ],
+          "confidence": 0.85,
+          "event_id": "E015",
+          "reason": "重试成功取得的候选预订信息未影响处理；用户随后明确指定了 3RK2T9。"
+        }
+      ],
+      "error": false
+    },
+    {
+      "identity": "airline:49",
+      "trajectory_id": "49",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            25
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            20,
+            21
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            25
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            24
+          ],
+          "confidence": 0.98,
+          "event_id": "E012",
+          "reason": "初始目标未指定预订，查询该候选有合理理由，但 VAOW1B 未进入 [24] 的选项列表，也未影响后续选择。"
+        },
+        {
+          "redundant_step_idx": [
+            20,
+            21
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            24
+          ],
+          "confidence": 0.98,
+          "event_id": "E013",
+          "reason": "初始目标未指定预订，查询该候选有合理理由，但 Q4MCUF 未进入 [24] 的选项列表，也未影响后续选择。"
+        }
+      ],
+      "error": false
+    }
+  ]
+}

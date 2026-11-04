@@ -1,0 +1,244 @@
+{
+  "metadata": {
+    "task": "detect",
+    "model": "v3",
+    "requested_units": 1,
+    "dataset_id": "human_annotation"
+  },
+  "results": [
+    {
+      "identity": "airline:18",
+      "trajectory_id": "18",
+      "domain": "airline",
+      "dataset_id": "human_annotation",
+      "gold": [
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            1
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Incorrect Step",
+          "evidence_step_idx": [
+            1
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            22,
+            23
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            26,
+            27
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            28,
+            29
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            32,
+            33
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            30,
+            31
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            32,
+            33
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            34,
+            35
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            32,
+            33
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            36,
+            37
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            38,
+            39
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            40,
+            41
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            44,
+            45
+          ]
+        },
+        {
+          "redundant_step_idx": [
+            42,
+            43
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            44,
+            45
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "redundant_step_idx": [
+            34,
+            35
+          ],
+          "redundant_step_type": "Duplicated Step",
+          "evidence_step_idx": [
+            32,
+            33
+          ],
+          "confidence": 0.99,
+          "event_id": "E020",
+          "reason": "此前对同一预订已用相同参数成功更新且返回相同结果，此次重复未带来新决策信息。"
+        },
+        {
+          "redundant_step_idx": [
+            16,
+            17
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ],
+          "confidence": 0.91,
+          "event_id": "E010",
+          "reason": "查询经济舱可用性有一定探索理由，但后续仍按原预订航班更新，未体现查询结果改变决策。"
+        },
+        {
+          "redundant_step_idx": [
+            18,
+            19
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            24,
+            25
+          ],
+          "confidence": 0.91,
+          "event_id": "E011",
+          "reason": "查询经济舱可用性有一定探索理由，但后续仍按原预订航班更新，未体现查询结果改变决策。"
+        },
+        {
+          "redundant_step_idx": [
+            22,
+            23
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            26,
+            27
+          ],
+          "confidence": 0.91,
+          "event_id": "E014",
+          "reason": "查询经济舱可用性有一定探索理由，但后续仍按原预订航班更新，未体现查询结果改变决策。"
+        },
+        {
+          "redundant_step_idx": [
+            28,
+            29
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            32,
+            33
+          ],
+          "confidence": 0.91,
+          "event_id": "E017",
+          "reason": "查询经济舱可用性有一定探索理由，但后续仍按原预订航班更新，未体现查询结果改变决策。"
+        },
+        {
+          "redundant_step_idx": [
+            30,
+            31
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            32,
+            33
+          ],
+          "confidence": 0.91,
+          "event_id": "E018",
+          "reason": "查询经济舱可用性有一定探索理由，但后续仍按原预订航班更新，未体现查询结果改变决策。"
+        },
+        {
+          "redundant_step_idx": [
+            36,
+            37
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            38,
+            39
+          ],
+          "confidence": 0.91,
+          "event_id": "E021",
+          "reason": "查询经济舱可用性有一定探索理由，但后续仍按原预订航班更新，未体现查询结果改变决策。"
+        },
+        {
+          "redundant_step_idx": [
+            40,
+            41
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            44,
+            45
+          ],
+          "confidence": 0.91,
+          "event_id": "E023",
+          "reason": "查询经济舱可用性有一定探索理由，但后续仍按原预订航班更新，未体现查询结果改变决策。"
+        },
+        {
+          "redundant_step_idx": [
+            42,
+            43
+          ],
+          "redundant_step_type": "Exploratory Step",
+          "evidence_step_idx": [
+            44,
+            45
+          ],
+          "confidence": 0.91,
+          "event_id": "E024",
+          "reason": "查询经济舱可用性有一定探索理由，但后续仍按原预订航班更新，未体现查询结果改变决策。"
+        }
+      ],
+      "error": false
+    }
+  ]
+}
